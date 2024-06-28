@@ -6,5 +6,8 @@
   "UniqueID": "aceynk.PersistentBuffs",
   "EntryDll": "PersistentBuffs.dll",
   "MinimumApiVersion": "4.0.0",
-  "UpdateKeys": []
+  "UpdateKeys": [
+    "Github:aceynk/PersistentBuffs",
+    "Nexus:25593"
+  ]
 }
