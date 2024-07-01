@@ -95,7 +95,7 @@ public class ModEntry : Mod
             newDict["DisplayName"] = tObj.displayName;
             newDict["Description"] = tObj.description;
             newDict["GlowColor"] = tObj.glow.PackedValue;
-            newDict["Duration"] = tObj.totalMillisecondsDuration;
+            newDict["Duration"] = tObj.millisecondsDuration;
             newDict["FarmingLevel"] = tObj.effects.FarmingLevel.Value;
             newDict["FishingLevel"] = tObj.effects.FishingLevel.Value;
             newDict["MiningLevel"] = tObj.effects.MiningLevel.Value;
