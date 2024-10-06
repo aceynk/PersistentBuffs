@@ -235,7 +235,7 @@ public class ModEntry : Mod
         Helper.Events.Content.AssetRequested += OnAssetRequested;
         Helper.Events.GameLoop.DayEnding += OnDayEnding;
         Helper.Events.GameLoop.DayStarted += OnDayStarted;
-        Helper.Events.GameLoop.GameLaunched += OnGameLaunched;
+        Helper.Events.GameLoop.SaveLoaded += OnSaveLoaded;
     }
 
     private static List<string> UsedIds(Dictionary<string, bool> idBoolDict)
@@ -243,7 +243,7 @@ public class ModEntry : Mod
         return idBoolDict.Keys.Where(v => idBoolDict[v]).ToList();
     }
 
-    private void OnGameLaunched(object? sender, GameLaunchedEventArgs e)
+    private void OnSaveLoaded(object? sender, SaveLoadedEventArgs e)
     {
         if (!Game1.player.modData.Keys.Contains(BDname))
         {
@@ -253,6 +253,7 @@ public class ModEntry : Mod
 
     private void OnDayEnding(object? sender, DayEndingEventArgs e) 
     {
+        
         Dictionary<string, Buff> DayEndBuffData =
             DecodeBuffData(new NetString(Game1.player.modData[BDname]));
         
